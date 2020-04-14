@@ -39,8 +39,8 @@ It also prevent visitors to load all unused icons when it is linked in .css or .
 In your HTML Template where you need an icon add
 ```
 <div class="container-fluid">
-		<% #see Helpers.GetSvgicons %>
-			<%= raw get_svgallicons() %>
+<% #see Helpers.GetSvgicons %>
+<%= raw get_svgallicons() %>
 </div>
 ```
 ## prerequisite
