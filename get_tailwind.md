@@ -11,6 +11,10 @@ def view_helpers do
 ...
 end
 ```
+
+Once installed, simply edit Get_tailwind.ex by adding your class combos from your template.
+This method respects Tailwind philosophy as well as Phoenix templating features.
+
 ### Usage exemple
 
 #### HTML attribute
