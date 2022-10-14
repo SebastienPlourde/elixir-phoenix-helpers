@@ -1,9 +1,10 @@
 ### Installation
 1) Create a folder named "Helpers" Phoenix_web/
 2) Add in /lib/phoenix_web.ex inside 
-```
+
+```Elixir
 def view_helpers do
-....
+...
   # near after the list of imports
   # Make sure to replace PhoenixWeb by the name of your project.
   alias PhoenixWeb.Router.Helpers, as: Routes # if not already there
@@ -12,6 +13,8 @@ def view_helpers do
 end
 ```
 
+
+
 Once installed, simply edit Get_tailwind.ex by adding your class combos from your template.
 This method respects Tailwind philosophy as well as Phoenix templating features.
 
@@ -19,36 +22,46 @@ This method respects Tailwind philosophy as well as Phoenix templating features.
 
 #### HTML attribute
 In the HTML template in the class attribute type this:
-```
+
+```HTML
 <h1 class={tw_("h1")}>Hello world!</h1>
 ```
+
 Instead of this
-```
+
+```HTML
 <h1 class="text-3xl font-bold text-gray-900">Hello world!</h1>
 ```
 
 #### Phoenix html
 In the HTML template in a form input
-```
+
+```HTML
 <%= text_input f, :units, class: tw_("input"), placeholder: "1" %>
 ```
+
 Instead of this
-```
+
+```HTML
 <%= text_input f, :units, class: "placeholder:italic placeholder:text-slate-200 shadow-sm focus:drop-shadow border border-zinc-300 rounded focus:border-indigo-600 focus:ring-0 sm:text-sm", placeholder: "1" %>
 ```
 
 #### HTML Block
 A complete html block is called with <raw>
-```
+
+```HTML
 <%= raw tw_("spacer") %>
 ```
+
 will return this
-```
+
+```HTML
 <div class=\"m-6\"></div>
 ```
 
 Like you  may need some icons in table row like the edit icon or the delete icon
-```
+
+```HTML
 <td class={tw_("td")}>
   <div class="flex flex-nowrap space-x-1">
     <div>
@@ -66,7 +79,8 @@ Like you  may need some icons in table row like the edit icon or the delete icon
 ```
 
 Where it is more readable than this
-```
+
+```HTML
 <td class="py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
   <div class="flex flex-nowrap space-x-1">
     <div>
@@ -87,13 +101,15 @@ Where it is more readable than this
 #### Extended à la tailwind
 Suppose you need to extend a combo with more classes but don't want to create the combo in the helper file because it is for a specific situation, and there's no need for "code reuse". You can simply add the class after the function with the <> operator.
         
-```
+```HTML
 <div class={tw_("container-white")}>
   <p class={tw_("note") <> " text-center"}>Hello World</p>
 </div>
+
 ```
 Which is way cleaner than
-```
+
+```HTML
 <div class="px-4 py-8 sm:px-6 lg:px-8 rounded-lg bg-slate-200 border-zinc-300 border drop-shadow-md">
   <p class="mt-2 text-sm italic text-gray-700 subpixel-antialiased text-center">Hello World</p>
 </div>
