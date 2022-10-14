@@ -7,7 +7,7 @@ def view_helpers do
   # near after the list of imports
   # Make sure to replace PhoenixWeb by the name of your project.
   alias PhoenixWeb.Router.Helpers, as: Routes # if not already there
-  import PhoenixWeb.Helpers.GetTailwinf
+  import PhoenixWeb.Helpers.GetTailwind
 ...
 end
 ```
