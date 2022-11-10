@@ -21,25 +21,50 @@ defmodule BcryptimpotWeb.Helpers.GetTailwind do
 #  <%= text_input f, :units, class: tw_("input"), placeholder: "1" %>
 
       "button" =>
-      "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-cyan-500 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-100",
+      "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-cyan-500 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-100"
+      <> " " <>
+      "dark:bg-cyan-600 dark:opacity-90 dark:shadow-slate-500 dark:shadow-md dark:border-cyan-300",
 
       "button_full" =>
-      "w-full px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-cyan-500 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-100",
+      "w-full px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-cyan-500 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-100"
+      <> " " <>
+      "dark:bg-cyan-600 dark:opacity-90 dark:shadow-slate-500 dark:shadow-md dark:border-cyan-300",
 
       "input" =>
-      "placeholder:italic placeholder:text-slate-200 shadow-sm focus:drop-shadow border border-zinc-300 rounded focus:border-indigo-600 focus:ring-0 sm:text-sm",
+      "placeholder:italic placeholder:text-slate-200 shadow-sm focus:drop-shadow border border-zinc-300 rounded focus:border-indigo-600 focus:ring-0 sm:text-sm"
+      <> " " <>
+      "dark:bg-slate-100 dark:shadow-black dark:shadow-inner dark:border-slate-900 dark:placeholder:text-slate-400 dark:text-slate-900",
+
+      "select" =>
+      "placeholder:italic placeholder:text-slate-200 shadow-sm focus:drop-shadow border border-zinc-300 rounded focus:border-indigo-600 focus:ring-0 sm:text-sm"
+      <> " " <>
+      "dark:bg-slate-100 dark:shadow-slate-500 dark:shadow-md dark:shadow-inner dark:border-slate-900 dark:placeholder:text-slate-400 dark:text-slate-900",
 
       "input-block" =>
-      "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md",
+      "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+      <> " " <>
+      "dark:bg-slate-100 dark:shadow-black dark:shadow-inner dark:border-slate-900 dark:placeholder:text-slate-400 dark:text-slate-900",
+
+      "select-block" =>
+      "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+      <> " " <>
+      "dark:bg-slate-100 dark:shadow-slate-500 dark:shadow-md dark:shadow-inner dark:border-slate-900 dark:placeholder:text-slate-400 dark:text-slate-900",
 
       "input-checkbox" =>
-      "focus:ring-indigo-500 focus:border-indigo-500 border-gray-900 rounded m-2 mb-3",
+      "focus:ring-indigo-500 focus:border-indigo-500 border-gray-900 rounded m-2 mb-3"
+      <> " " <>
+      "dark:bg-slate-100",
 
       "label-block" =>
-      "block text-sm font-medium text-gray-700",
+      "block text-sm font-medium text-gray-700"
+      <> " " <>
+      "dark:text-slate-300",
+
 
       "submit" =>
-      "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-cyan-500 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-100",
+      "inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-cyan-500 hover:bg-cyan-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-100"
+      <> " " <>
+      "dark:bg-cyan-600 dark:opacity-90 dark:shadow-slate-500 dark:shadow-md dark:border-cyan-300",
 
 
 # Elements
@@ -49,18 +74,45 @@ defmodule BcryptimpotWeb.Helpers.GetTailwind do
       "border-transparent text-gray-300 hover:bg-gray-700 hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium",
 
       "container-white" =>
-      "x-4 py-8 sm:px-6 lg:px-8 rounded-lg bg-white border-zinc-300 border drop-shadow-md",
+      "x-4 py-8 sm:px-6 lg:px-8 rounded-lg bg-white border-zinc-300 border drop-shadow-md"
+      <> " " <>
+      "dark:bg-slate-600 dark:border-zinc-800",
 
       "container-slate" =>
-      "px-4 py-8 sm:px-6 lg:px-8 rounded-lg bg-slate-200 border-zinc-300 border drop-shadow-md",
+      "px-4 py-8 sm:px-6 lg:px-8 rounded-lg bg-slate-200 border-zinc-300 border drop-shadow-md"
+      <> " " <>
+      "dark:bg-slate-600 dark:border-zinc-800",
+
+      "container_summary" =>
+      "-mx-4 mt-8 overflow-hidden shadow ring-1 ring-black ring-opacity-5 sm:-mx-6 md:mx-0 rounded-lg bg-white"
+      <> " " <>
+      "dark:bg-slate-200",
+
+      "tile_summary"=>
+      "px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6"
+      <> " " <>
+      "dark:bg-slate-200 dark:shadow-black dark:shadow-inner",
 
 # Tables
 
+      "table" =>
+      "min-w-full divide-y divide-gray-300",
+
+      "thead" =>
+      "bg-gray-50"
+      <> " " <>
+      "dark:bg-slate-400",
+
+      "tbody" =>
+      "divide-y divide-gray-200 bg-white"
+      <> " " <>
+      "dark:bg-slate-200 dark:divide-slate-400",
+
       "th_first" =>
-      "py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6",
+      "py-3.5 pl-4 pr-3 text-sm font-semibold text-gray-900 sm:pl-6",
 
       "th" =>
-      "hidden px-3 py-3.5 text-right text-sm font-semibold text-gray-900 sm:table-cell",
+      "hidden px-3 py-3.5 text-sm font-semibold text-gray-900 sm:table-cell",
 
       "th_sticky" =>
       "px-3 py-3.5 text-right text-sm font-semibold text-gray-900",
@@ -69,59 +121,92 @@ defmodule BcryptimpotWeb.Helpers.GetTailwind do
       "-full max-w-0 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:w-auto sm:max-w-none sm:pl-6",
 
       "td_wrapped" =>
-      "hidden px-3 py-4 text-right text-sm text-gray-500 sm:table-cell",
+      "hidden px-3 py-4 text-sm text-gray-500 sm:table-cell",
 
       "td" =>
-      "px-3 py-4 text-right text-sm text-gray-500",
-
+      "px-3 py-4 text-sm text-gray-500",
 
 # Typography
 # <h1 class={tw_("h1")}>
+# <p class={tw_("hero") <> " text-center max-w-5xl"}>
 
       "a" =>
-      "text-indigo-600 hover:text-indigo-900",
+      "text-indigo-600 hover:text-indigo-900"
+      <> " " <>
+      "dark:text-indigo-300 dark:hover:text-indigo-200",
 
       "inline_link" =>
       "underline cursor-pointer",
 
       "h1" =>
-      "text-3xl font-bold text-gray-900",
+      "text-3xl font-bold text-gray-900"
+      <> " " <>
+      "dark:text-slate-300",
 
       "h2" =>
-      "text-3xl font-semibold text-gray-900",
+      "text-3xl font-semibold text-gray-900"
+      <> " " <>
+      "dark:text-slate-400",
 
       "h3" =>
-      "text-xl font-bold text-gray-900",
+      "text-xl font-bold text-gray-900"
+      <> " " <>
+      "dark:text-slate-400",
 
       "h4" =>
-      "text-xl font-semibold text-gray-900",
+      "text-xl font-semibold text-gray-900"
+      <> " " <>
+      "dark:text-slate-400",
 
       "sub-h4" =>
-      "mt-2 text-sm text-gray-700",
+      "mt-2 text-sm text-gray-700"
+      <> " " <>
+      "dark:text-slate-300",
 
       "h5" =>
-      "text-lg font-bold text-gray-900",
+      "text-lg font-bold text-gray-900"
+      <> " " <>
+      "dark:text-slate-400",
 
       "h6" =>
-      "text-lg font-semibold text-gray-900",
+      "text-lg font-semibold text-gray-900"
+      <> " " <>
+      "dark:text-slate-400",
 
       "note" =>
-      "mt-2 text-sm italic text-gray-700 subpixel-antialiased",
+      "mt-2 text-sm italic text-gray-700 subpixel-antialiased"
+      <> " " <>
+      "dark:text-slate-400",
 
       "lead" =>
-      "text-3xl font-extralight text-gray-900",
+      "text-3xl font-extralight text-gray-900"
+      <> " " <>
+      "dark:text-slate-400",
 
       "intro" =>
-      "text-2xl font-extralight text-gray-900",
+      "text-2xl font-extralight text-gray-900"
+      <> " " <>
+      "dark:text-slate-400",
 
       "loud" =>
-      "text-3xl font-bold text-gray-900",
+      "text-3xl font-bold text-gray-900"
+      <> " " <>
+      "dark:text-slate-400",
 
       "hero" =>
-      "text-5xl font-extralight text-gray-900 leading-normal",
+      "text-5xl font-extralight text-gray-900 leading-normal"
+      <> " " <>
+      "dark:text-slate-400",
 
       "p" =>
-      "text font-extralight text-gray-900",
+      "text font-extralight text-gray-900"
+      <> " " <>
+      "dark:text-slate-400",
+
+      "default" =>
+      "text-gray-900"
+      <> " " <>
+      "dark:text-slate-300",
 
 
 
